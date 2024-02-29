@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UREL</title>
+</head>
+<body>
+
+    <h1>Create A URL</h1>
+
+    <form method="POST" action="/url">
+        <label for="nameI">Enter the Name of Url</label>
+        <input autocomplete="off" type="text" name="name" id="nameI" required>
+        <label for="longURLI">Enter The Url:</label>
+        <input autocomplete="off" type="text" name="longURL" id="longURLI" required>
+        <button type="submit">Submit</button>
+        <label for="out">ShortURL:</label>
+        <span><%= locals.createdURL.shortURL %></span>
+    </form>
+
+    <p>------------------------------------------------ MY URLS ------------------------------------------------</p>
+
+    <% allurls.forEach(url => { %>
+        <ul>
+            <li><%= url.shortURL + ' -- ' + url.longURL + ' -- ' + url.history.length%></li> <button>Update</button>
+        </ul>
+    <% }) %>
+</body>
+</html>
