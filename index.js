@@ -8,12 +8,12 @@ const path = require('path');
 const {connectToDataBase} = require('./connection.js');
 const { homedir } = require('os');
 const cookieParser = require('cookie-parser');
-const PORT = 8000
-
+require('dotenv').config()
+const PORT = process.env.PORT || 8000
 const app = express()
 
 //Connecting to Database
-connectToDataBase('mongodb+srv://aryashu448:u2Lq7tFdPp1fkRFv@cluster0.0pivfvb.mongodb.net/UREL').then(()=>{console.log("Connected to Database")}).catch((err)=>{console.log("There Was an error",err)})
+connectToDataBase(process.env.MONGO_URL).then(()=>{console.log("Connected to Database")}).catch((err)=>{console.log("There Was an error",err)})
 // views
 app.set('view engine', 'ejs');
 app.set('views',path.resolve('./views'));
