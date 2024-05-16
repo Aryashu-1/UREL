@@ -13,7 +13,7 @@ const PORT = 8000
 const app = express()
 
 //Connecting to Database
-connectToDataBase('mongodb://127.0.0.1:27017/UREL').then(()=>{console.log("Connected to Database")}).catch((err)=>{console.log("There Was an error",err)})
+connectToDataBase('mongodb+srv://aryashu448:u2Lq7tFdPp1fkRFv@cluster0.0pivfvb.mongodb.net/UREL').then(()=>{console.log("Connected to Database")}).catch((err)=>{console.log("There Was an error",err)})
 // views
 app.set('view engine', 'ejs');
 app.set('views',path.resolve('./views'));
