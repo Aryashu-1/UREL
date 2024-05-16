@@ -23,8 +23,14 @@
 
     <% allurls.forEach(url => { %>
         <ul>
-            <li><%= url.shortURL + ' -- ' + url.longURL + ' -- ' + url.history.length%></li> <button>Update</button>
+            <li>
+                <a href="<%= url.shortURL %>"><%= url.shortURL %></a> -- 
+                <%= url.longURL %> -- 
+                <%= url.history.length %>
+                <button>Update</button>
+            </li>
         </ul>
     <% }) %>
+    
 </body>
 </html>

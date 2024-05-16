@@ -77,7 +77,7 @@ async function handlePostRequest(req,res){
     const createURL = await UREL.create({
         name:req.body.name,
         longURL:req.body.longURL,
-        shortURL:`${req.hostname}`+"/"+`${req.body.name}`,
+        shortURL:`https://${req.hostname}`+"/"+`${req.body.name}`,
         createdBy : req.user._id,
         history:[]
     }).catch((err)=>{
