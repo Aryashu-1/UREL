@@ -17,6 +17,7 @@ connectToDataBase(process.env.MONGO_URL).then(()=>{console.log("Connected to Dat
 // views
 app.set('view engine', 'ejs');
 app.set('views',path.resolve('./views'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Middlewares
 app.use(express.urlencoded({extended : true}))

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UREL</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
 
@@ -15,11 +16,11 @@
         <label for="longURLI">Enter The Url:</label>
         <input autocomplete="off" type="text" name="longURL" id="longURLI" required>
         <button type="submit">Submit</button>
-        <label for="out">ShortURL:</label>
-        <span><%= locals.createdURL.shortURL %></span>
+        <!-- <label for="out">ShortURL:</label> -->
+        <!-- <span><%= locals.createdURL.shortURL %></span> -->
     </form>
 
-    <p>------------------------------------------------ MY URLS ------------------------------------------------</p>
+    <!-- <p>------------------------------------------------ MY URLS ------------------------------------------------</p> -->
 
     <% allurls.forEach(url => { %>
         <ul>
